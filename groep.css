@@ -1,0 +1,146 @@
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Hoofdcontainer */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 50px 70px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 40px;
+}
+
+/* Titel */
+h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* De terugknop */
+.back-button {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    top: 20px; /* Afstand van de bovenkant van de container */
+    left: 20px; /* Afstand van de linkerkant van de container */
+}
+
+.back-button:hover {
+    background-color: #2980b9;
+}
+
+/* Positie */
+.container {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 50px 70px; /* Extra padding aan de zijkanten */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 40px; /* Vergrote margin rond de container */
+}
+
+/* Invoerveld voor het aantal resultaten */
+.results-input {
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    border: 2px solid #3498db;
+    margin-top: 20px;
+    width: 250px;
+    text-align: center;
+    transition: border-color 0.3s ease;
+}
+
+.results-input:focus {
+    outline: none;
+    border-color: #1e3d58;
+}
+
+/* Container voor de grafieken */
+.charts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 40px;
+    margin-top: 30px;
+    padding: 20px 0;
+}
+
+/* iframe voor de grafieken */
+iframe {
+    border-radius: 10px;
+    width: calc(100% - 20px);
+    height: 270px;
+    border: 2px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+
+/* Blur */
+.read-key-container {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.read-key {
+    filter: blur(5px);
+    cursor: pointer;
+    transition: filter 0.3s ease;
+}
+
+.read-key:hover {
+    filter: blur(0);
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .results-input {
+        width: 220px;
+    }
+
+    .charts-container {
+        grid-template-columns: 1fr;
+        padding: 10px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .back-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .results-input {
+        font-size: 1rem;
+    }
+}
+
