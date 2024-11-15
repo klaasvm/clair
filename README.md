@@ -2,10 +2,6 @@
 
 ### Our Task:
 
-Opdracht CLAIR 4STEM
-
-Opdracht voor alle groepjes
-
 1. Maak een account aan in Thingspeak waar de meetresultaten kunnen weggeschreven worden. Vul je paswoord, accountnaam, read- en writesleutel aan in het exceldocument op team.
 
 2. De sensoren van elk groepje moeten in 1 bak geplaatst worden en gedurende 1 week meten.
