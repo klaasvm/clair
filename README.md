@@ -1,6 +1,6 @@
 # Stem project Clair (Clean Air)
 
-*****Our Task:*****
+### Our Task:
 
 Opdracht CLAIR 4STEM
 
