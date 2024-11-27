@@ -33,13 +33,40 @@
 
 /* Stijl voor de inhoud van de pagina */
 .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
-    text-align: center;
 }
 
-h1 {
+.text-content {
+    width: 50%;
+    padding: 20px;
+    text-align: left;
+}
+
+.text-content h1 {
     font-size: 36px;
     margin-bottom: 20px;
+}
+
+.text-content p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.image-content {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sensor-image {
+    max-width: 40%; /* Maximaal de helft van de originele breedte */
+    max-height: 40%; /* Maximaal de helft van de originele hoogte */
+    border: 2px solid #ccc;
+    border-radius: 8px;
 }
 
 /* Footer */
@@ -51,6 +78,7 @@ h1 {
     bottom: 0;
     width: 100%;
     text-align: center;
+    right: 25%;
 }
 
 .footer-content {
