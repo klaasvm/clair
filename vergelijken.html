@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vergelijk Groepen</title>
+
+    <script src="config.js"></script>
+    <link rel="stylesheet" href="vergelijken.css">
+
+    <script>
+        // Haalt geselecteerde groepen en veld op
+        function getSelections() {
+            const selectedGroups = Array.from(document.querySelectorAll('#groupsSelect option:checked')).map(option => option.value);
+            const selectedField = document.querySelector('input[name="part"]:checked')?.value || '1';
+            return { groups: selectedGroups, field: selectedField };
+        }
+
+        // Laadt en toont data
+        function updateVisualizations() {
+            const { groups, field } = getSelections();
+            const container = document.getElementById('groupsContainer');
+            container.innerHTML = ''; // Reset inhoud
+
+            // Controleer of er groepen geselecteerd zijn
+            if (groups.length === 0) {
+                console.log('Geen groepen geselecteerd, geen grafieken te tonen.');
+                return;
+            }
+
+            // Voeg een flexbox toe aan de container om de grafieken te beheren
+            container.style.display = 'flex';
+            container.style.flexWrap = 'wrap';
+            container.style.justifyContent = groups.length === 1 ? 'center' : 'space-between';
+
+            // Itereer over de geselecteerde groepen en toon grafieken
+            groups.forEach(group => {
+                const groupConfig = config[group];
+                if (groupConfig && groupConfig.fields[field]) {
+                    const groupDiv = document.createElement('div');
+                    groupDiv.className = 'group-container';
+                    
+                    // Titel toevoegen
+                    const title = document.createElement('h2');
+                    title.textContent = `Data van ${group}`;
+                    groupDiv.appendChild(title);
+
+                    // Grafiek iframe toevoegen
+                    const iframe = document.createElement('iframe');
+                    iframe.width = "600";
+                    iframe.height = "350";
+                    iframe.src = `https://thingspeak.com/channels/${groupConfig.channelId}/charts/${field}?api_key=${groupConfig.apiKey}&results=60`;
+                    groupDiv.appendChild(iframe);
+
+                    // Voeg de groep toe aan de container
+                    container.appendChild(groupDiv);
+                } else {
+                    console.error(`Ongeldige groep of veld: ${group}`);
+                }
+            });
+        }
+
+        // Automatisch data updaten bij veranderingen
+        document.addEventListener('DOMContentLoaded', () => {
+            // Event listener voor groepselectie
+            document.getElementById('groupsSelect').addEventListener('change', updateVisualizations);
+
+            // Event listener voor onderdeelselectie
+            document.querySelectorAll('input[name="part"]').forEach(input =>
+                input.addEventListener('change', updateVisualizations)
+            );
+
+            // Laad data direct bij opstarten
+            updateVisualizations();
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Vergelijk Groepen</h1>
+
+        <button onclick="window.location.href='groepen.html'" class="back-button">Terug</button>
+        <div class="group-selection">
+            <label for="groupsSelect">Selecteer Groepen:</label>
+            <p>(Ctrl + klik voor meerdere groepen te selecteren)</p>
+            <select id="groupsSelect" multiple>
+                <option value="groep1">Groep 1</option>
+                <option value="groep2">Groep 2</option>
+                <option value="groep3">Groep 3</option>
+                <option value="groep4">Groep 4</option>
+                <option value="groep5">Groep 5</option>
+                <option value="groep6">Groep 6</option>
+                <option value="groep7">Groep 7</option>
+                <option value="groep8">Groep 8</option>
+                <option value="groep9">Groep 9</option>
+                <option value="groep10">Groep 10</option>
+                <option value="groep11">Groep 11</option>
+                <option value="groep12">Groep 12</option>
+                <option value="JosClair1">Jos Clair 1</option>
+                <option value="JosClair2">Jos Clair 2</option>
+            </select>
+        </div>
+
+        <div class="part-selection">
+            <label>Selecteer Onderdeel:</label>
+            <div class="radio-group">
+                <input type="radio" id="field1" name="part" value="1" checked>
+                <label for="field1">CO2</label>
+                <input type="radio" id="field2" name="part" value="2">
+                <label for="field2">Temp (SCD)</label>
+                <input type="radio" id="field3" name="part" value="3">
+                <label for="field3">RH (SCD)</label>
+                <input type="radio" id="field4" name="part" value="4">
+                <label for="field4">VOC</label>
+                <input type="radio" id="field5" name="part" value="5">
+                <label for="field5">Temp (BME)</label>
+                <input type="radio" id="field6" name="part" value="6">
+                <label for="field6">RH (BME)</label>
+                <input type="radio" id="field7" name="part" value="7">
+                <label for="field7">PM 2.5</label>
+                <input type="radio" id="field8" name="part" value="8">
+                <label for="field8">PM 10</label>
+            </div>
+        </div>
+
+        <button onclick="location.reload()" class="reset-button">Reset</button>
+
+        <div id="groupsContainer"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+/* Algemeen reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Stijl voor de navbar */
+.navbar {
+    background-color: blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Stijl voor de inhoud van de pagina */
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+.footer {
+    background-color: transparent;
+    color: #000000;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.github-logo {
+    width: 25px;
+    height: 25px;
+    transition: transform 0.3s;
+}
+
+.github-logo:hover {
+    transform: scale(1.2);
+}

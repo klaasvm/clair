@@ -1,0 +1,84 @@
+/* Algemene reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Terug knop linksboven */
+.back-button {
+    position: fixed; /* Zorgt ervoor dat de knop altijd op zijn plaats blijft, zelfs als je naar beneden scrolt */
+    top: 20px;
+    left: 20px;
+    z-index: 10; /* Zorgt ervoor dat de knop boven de andere inhoud blijft */
+}
+
+.back-button a {
+    text-decoration: none;
+    font-size: 18px;
+    color: black; /* Zwarte tekst */
+    font-weight: bold;
+    background-color: blue; /* Blauwe achtergrond */
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.back-button a:hover {
+    background-color: darkblue; /* Donkerblauwe achtergrond bij hover */
+    transform: scale(1.05); /* Vergroot de knop een beetje bij hover */
+}
+
+/* Stijl voor de inhoud */
+.content {
+    text-align: center; /* Zorgt ervoor dat de tekst en afbeelding gecentreerd zijn */
+    padding: 20px;
+    padding-top: 80px; /* Voegt extra ruimte toe bovenaan zodat de knop niet over de tekst gaat */
+}
+
+/* Stijl voor de afbeelding */
+.centered-image {
+    display: block;
+    margin: 75px auto 0;
+    max-width: 30%;
+    height: auto;
+}
+
+/* Stijl voor de tekst */
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+.footer {
+    background-color: transparent;
+    color: #000000;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.github-logo {
+    width: 25px;
+    height: 25px;
+    transition: transform 0.3s;
+}
+
+.github-logo:hover {
+    transform: scale(1.2);
+}

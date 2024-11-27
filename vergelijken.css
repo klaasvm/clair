@@ -1,0 +1,186 @@
+/* Algemene body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Hoofdcontainer */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 50px 70px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 40px auto;
+    position: relative;
+}
+
+/* Titel */
+h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* De terugknop (nu binnen de container) */
+.back-button {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.back-button:hover {
+    background-color: #2980b9;
+}
+
+.group-selection {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.group-selection label {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 1px;
+    display: block;
+    font-weight: bold;
+}
+
+#groupsSelect {
+    width: 100%;
+    max-width: 120px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #3498db;
+    font-size: 1rem;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Onderdelen selectie */
+.part-selection {
+    margin-top: 20px;
+}
+
+.part-selection label {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    justify-content: center;
+    max-height: 150px;
+    overflow-y: auto;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+.radio-group input[type="radio"] {
+    margin: 0 5px;
+}
+
+.radio-group label {
+    margin: 0 10px;
+    font-size: 1.1rem;
+}
+
+/* Reset button rechtsboven in de container */
+.reset-button {
+    background-color: #e74c3c;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.reset-button:hover {
+    background-color: #c0392b;
+}
+
+/* Grafieken-container */
+#groupsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Zorg ervoor dat alles gecentreerd is */
+    gap: 20px;
+    margin-top: 30px;
+    padding: 0;
+}
+
+/* Grafieken (max 2 per rij, meer ruimte per container) */
+.group-container {
+    width: calc(50% - 20px); /* Zorg ervoor dat er max 2 per rij passen */
+    height: auto; /* Zorg ervoor dat de container altijd in verhouding is */
+    margin-bottom: 20px;
+}
+
+/* Als er maar 1 grafiek op een rij staat, zorg ervoor dat deze in het midden staat */
+#groupsContainer:only-child {
+    display: flex;
+    justify-content: center; /* Centreer de container als er maar 1 grafiek is */
+}
+
+#groupsContainer > .group-container {
+    width: calc(50% - 20px); /* Maximum 2 per rij */
+}
+
+/* Iframes voor grafieken */
+iframe {
+    width: 100%;
+    height: 275px; /* Vergroten van de hoogte van de grafieken */
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsieve styling voor kleinere schermen */
+@media (max-width: 768px) {
+    .group-container {
+        width: 100%; /* Bij kleinere schermen, alles onder elkaar */
+    }
+
+    iframe {
+        height: 250px; /* Iframe hoogte aanpassen voor mobiel */
+    }
+}
+
+.group-selection p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 1px;
+}

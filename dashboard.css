@@ -1,0 +1,161 @@
+/* Algemeen reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Stijl voor de navbar */
+.navbar {
+    background-color: blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Titel voor de knoppen */
+.title {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.title h2 {
+    font-size: 32px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Stijl voor de knoppen */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.button {
+    text-decoration: none;
+    padding: 20px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.green {
+    background-color: green;
+    color: white;
+}
+
+.green:hover {
+    background-color: darkgreen;
+    transform: scale(1.05);
+}
+
+.red {
+    background-color: red;
+    color: white;
+}
+
+.red:hover {
+    background-color: darkred;
+    transform: scale(1.05);
+}
+
+/* Inhoudstafel rechtsonder */
+.status-table {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: white;
+    padding: 15px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.status-table h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.status-table ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.status-table li {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.green-circle {
+    width: 10px;
+    height: 10px;
+    background-color: green;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.red-circle {
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Footer */
+.footer {
+    background-color: transparent;
+    color: #000000;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.github-logo {
+    width: 25px;
+    height: 25px;
+    transition: transform 0.3s;
+}
+
+.github-logo:hover {
+    transform: scale(1.2);
+}

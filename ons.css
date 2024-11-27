@@ -1,0 +1,111 @@
+/* Algemeen reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Stijl voor de navbar */
+.navbar {
+    background-color: blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Stijl voor de inhoud van de pagina */
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+/* Stijl voor de teamleden */
+.team-member {
+    margin: 20px;
+    display: inline-block;
+    text-align: center;
+}
+
+.team-photo {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Footer */
+.footer {
+    background-color: transparent;
+    color: #000000;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.github-logo {
+    width: 25px;
+    height: 25px;
+    transition: transform 0.3s;
+}
+
+.github-logo:hover {
+    transform: scale(1.2);
+}
+
+/* Bronnen tekst rechtsonder */
+.sources {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 14px;
+}
+
+.sources a {
+    text-decoration: none;
+    color: blue;
+}
+
+.sources a:hover {
+    text-decoration: underline;
+}
