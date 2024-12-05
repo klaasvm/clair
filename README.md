@@ -23,3 +23,6 @@ Elk groepje kiest één van onderstaande opdrachten
 5. De VOC-concentratie wordt afgeleid uit de weerstandswaarde van een bepaal metaaloxidekristal. Omdat de weerstandswaarde kan verschillen van kristal tot kristal wordt een door de hardware in de CSS811-sensor een bepaalde “baseline”-instelling uitgevoerd. Lees deze baseline-instelling bij verschillende sensoren uit probeer hierin een systeem te ontdekken.
 
 6. Maak een algemene evaluatie van de luchtkwaliteit in onze klaslokalen en formuleer verbeteringsvoorstellen om de luchtkwaliteit te verbeteren.
+
+# Stem project Clair (Clean Air)
+(comming soon)
